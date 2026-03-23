@@ -1,0 +1,95 @@
+/* Aether Studio - Professional Dark Theme */
+:root {
+    --bg-dark: #0f0f0f;
+    --panel-bg: #1a1a1a;
+    --accent: #007acc;
+    --text-main: #e0e0e0;
+    --code-green: #00ff41;
+    --border: #333;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+}
+
+/* Estructura de Paneles Estilo Unity */
+.aether-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr 300px;
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar, .inspector {
+    background: var(--panel-bg);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    padding: 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--accent);
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Editor de Código (Dificultad Máxima) */
+.editor-area {
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+}
+
+#code-input {
+    flex-grow: 1;
+    background: transparent;
+    color: var(--code-green);
+    border: none;
+    padding: 20px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    line-height: 1.5;
+}
+
+/* Botones y Herramientas */
+.toolbar {
+    background: #252526;
+    padding: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+button:hover {
+    background: #005f99;
+}
+
+/* Explorador de archivos */
+.item {
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.item:hover { background: #2a2d2e; }
+.item.active { background: #37373d; color: var(--accent); }
+.indent { padding-left: 40px; }

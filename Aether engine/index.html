@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aether Studio | Engine v1.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="aether-layout">
+        <aside class="sidebar">
+            <div class="logo">AETHER</div>
+            <nav id="file-tree">
+                <div class="item">📂 core/</div>
+                <div class="item indent">📄 compile.js</div>
+                <div class="item">📂 std_libs/</div>
+                <div class="item indent active">📄 maths.ae</div>
+            </nav>
+        </aside>
+        
+        <main class="editor-area">
+            <div class="toolbar">
+                <button onclick="ejecutarCodigo()">▶ EJECUTAR NÚCLEO</button>
+            </div>
+            <textarea id="code-input" spellcheck="false">
+Modulo TestGame {
+    Metodo OnStart() {
+        Log.Print("Probando Motor Aether...");
+    }
+}
+            </textarea>
+        </main>
+    </div>
+
+    <script src="core/compile.js"></script>
+    <script src="core/engine.js"></script>
+    <script>
+        function ejecutarCodigo() {
+            const code = document.getElementById('code-input').value;
+            AetherCompiler.run(code);
+        }
+    </script>
+</body>
+</html>

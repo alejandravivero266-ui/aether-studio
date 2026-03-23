@@ -1,0 +1,13 @@
+// Aether Physics Standard Library [.ae]
+Modulo PhysicsCore {
+    // Definición de constantes de precisión
+    Propiedad gravity: Float64 = -9.81;
+    Propiedad airResistance: Float32 = 0.02;
+
+    Metodo ApplyGravity(entityId: Int) {
+        // Lógica de caída libre manual
+        si (entityId > 0) {
+            Log.Print("Aplicando gravedad física a entidad " + entityId);
+        }
+    }
+}
